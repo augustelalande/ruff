@@ -25,6 +25,8 @@ pub(crate) use test_rules::*;
 pub(crate) use unnecessary_dict_comprehension_for_iterable::*;
 pub(crate) use unnecessary_iterable_allocation_for_first_element::*;
 pub(crate) use unnecessary_key_check::*;
+#[cfg(feature = "unreachable-code")]
+pub(crate) use unreachable::*;
 pub(crate) use unused_noqa::*;
 
 mod ambiguous_unicode_character;
@@ -58,6 +60,8 @@ pub(crate) mod test_rules;
 mod unnecessary_dict_comprehension_for_iterable;
 mod unnecessary_iterable_allocation_for_first_element;
 mod unnecessary_key_check;
+#[cfg(feature = "unreachable-code")]
+pub(crate) mod unreachable;
 mod unused_noqa;
 
 #[derive(Clone, Copy)]
